@@ -13,20 +13,16 @@
   <table align="center">
     <thead>
       <tr>        
-        <th>Name</th>
-        <th>Age</th>
-        <th>Cars</th>
+        <th>Field</th>
+        <th>FleetAverage</th>
+        <th>Yield</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let person of _data">        
-        <td>{{person.name}}</td>
-        <td>{{person.age}}</td>        
-        <td>
-          <div *ngFor="let car of person.cars">
-            {{car}}
-          </div>
-        </td>
+      <tr *ngFor="let field of _data.fieldList">
+        <td>{{field.fieldName}}</td>
+        <td>{{field.fleetAverage}}</td>
+        <td>{{field.yield}}</td>
       </tr>
     </tbody>
   </table>

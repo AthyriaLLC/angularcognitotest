@@ -39,9 +39,10 @@ export class RestApiComponent implements OnInit {
         const token = session.getIdToken().getJwtToken();        
         const headers = new Headers();
         headers.append('Authorization', token);        
-        this.http.get('put your api gateway endpoint here', { headers: headers })
+        this.http.get('https://deere.hacotton.net/prod/orgId/1/sugar/operation/2019/windowHours/168/zoomLevel/600/fieldList/?units=metric', { headers: headers })
           .subscribe(
-          response => {           
+          response => {
+            console.log(response.json());
             that._data = response.json();
           },
           error => {
